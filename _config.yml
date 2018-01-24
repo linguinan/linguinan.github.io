@@ -3,7 +3,7 @@ title: Linguinan's Blog
 SEOTitle: 林桂楠的博客 | Lgn Blog
 header-img: img/home-bg.jpg
 email: lgn2048@gmail.com
-description: "关于Unity开发、游戏人生 | 林桂楠，Unity Engineer | 这里是 @Hux林桂楠 的个人博客，与你一起发现更大的世界。"
+description: "关于Unity开发、游戏人生 | 林桂楠，Unity Engineer | 这里是 @linguinan林桂楠 的个人博客，与你一起发现更大的世界。"
 keyword: "林桂楠, Lgn, 林桂楠的博客, Lgn Blog, 博客, 个人网站, 互联网, 前端"
 url: "https://linguinan.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -12,12 +12,12 @@ baseurl: ""                             # for example, '/blog' if your blog host
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
-#facebook_username:  huxpro
-# linkedin_username:  firstname-lastname-idxxxx
+#weibo_username:     linguinan
+#zhihu_username:     linguinan
+github_username:    linguinan
+#twitter_username:   linguinan
+#facebook_username:  linguinan
+#linkedin_username:  firstname-lastname-idxxxx
 
 
 
@@ -48,7 +48,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+disqus_username: linguinan
 
 # Netease setttings
 netease_comment: false
@@ -60,15 +60,15 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-lgn.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
