@@ -95,5 +95,8 @@ friends: [
     },{
         title: "Candycat的博客",
         href: "http://candycat1992.github.io/"
+    },{
+        title: "酷壳",
+        href: "https://coolshell.cn/"
     }
 ]
