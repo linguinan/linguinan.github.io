@@ -13,9 +13,8 @@ tags:
 
 > 总结插件开发方式，提高底层原生调用的能力
 
-mac
+
 #[Building a Plugin for Mac OS X](https://docs.unity3d.com/Manual/PluginsForDesktop.html)
-注：
 ````c#
 [DllImport ("PluginName")]
 private static extern float FooPluginFunction ();
@@ -30,9 +29,8 @@ private static extern float FooPluginFunction ();
 [macOS] --> [Framework & Library] --> [Bundle]
 ```
 
-ios
+
 #[Building Plugins for iOS](https://docs.unity3d.com/Manual/PluginsForIOS.html)
-注：
 ````c#
 [DllImport ("__Internal")]
 private static extern float FooPluginFunction();
@@ -61,8 +59,8 @@ IMPL_APP_CONTROLLER_SUBCLASS(MainDelegate)
 * 3.选择真机进行运行，在运行后我们找到生成的.a文件右键选择show in finder就可以了
 ![img](/img/in-post/plugin-3.png)
 
-- []mac sample
-- []ios sample
+- [ ]mac sample
+- [ ]ios sample
 
 <p id = "mark"></p>
 ---
