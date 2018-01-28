@@ -1,5 +1,5 @@
 ---
-layout:     keynote
+layout:     post
 title:      "打包mac和ios用的Unity的plugins"
 subtitle:   "原生插件打包"
 date:       2018-01-01
@@ -14,8 +14,8 @@ tags:
 > 总结插件开发方式，提高底层原生调用的能力
 
 
-#[Building a Plugin for Mac OS X](https://docs.unity3d.com/Manual/PluginsForDesktop.html)
-````c#
+# [Building a Plugin for Mac OS X](https://docs.unity3d.com/Manual/PluginsForDesktop.html)
+```` c#
 [DllImport ("PluginName")]
 private static extern float FooPluginFunction ();
 ````
@@ -23,21 +23,21 @@ private static extern float FooPluginFunction ();
 实验过了，可用例子里的cpp
 也可以跟ios的一样，用一样的objc代码，只是上面的名字一定要用导出的**bundle文件名**
 
-##新建bundle项目
+## 新建bundle项目
 ``` 
 [XCode] --> [File] --> [NewProject
 [macOS] --> [Framework & Library] --> [Bundle]
 ```
 
 
-#[Building Plugins for iOS](https://docs.unity3d.com/Manual/PluginsForIOS.html)
-````c#
+# [Building Plugins for iOS](https://docs.unity3d.com/Manual/PluginsForIOS.html)
+```` c#
 [DllImport ("__Internal")]
 private static extern float FooPluginFunction();
 ````
 
 要实现重写Unity的启动程序，需在末尾加上：
-````c#
+```` c#
 //自动修改启动程序
 IMPL_APP_CONTROLLER_SUBCLASS(MainDelegate)
 ````
@@ -66,7 +66,7 @@ IMPL_APP_CONTROLLER_SUBCLASS(MainDelegate)
 ---
 
 UnityAppController.h 里面有这样一个宏：
-````objective-c
+```` objective-c
 #define IMPL_APP_CONTROLLER_SUBCLASS(ClassName) 
 @interface ClassName(OverrideAppDelegate)       
 {                                               
