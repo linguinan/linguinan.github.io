@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "打包mac和ios用的Unity的plugins"
+title:      "打包mac和ios用的Unity plugins"
 subtitle:   "原生插件打包"
 date:       2018-01-01
 author:     "Lgn"
@@ -23,7 +23,7 @@ private static extern float FooPluginFunction ();
 实验过了，可用例子里的cpp
 也可以跟ios的一样，用一样的objc代码，只是上面的名字一定要用导出的**bundle文件名**
 
-## 新建bundle项目
+新建bundle项目
 ``` 
 [XCode] --> [File] --> [NewProject
 [macOS] --> [Framework & Library] --> [Bundle]
@@ -59,14 +59,14 @@ IMPL_APP_CONTROLLER_SUBCLASS(MainDelegate)
 * 3.选择真机进行运行，在运行后我们找到生成的.a文件右键选择show in finder就可以了
 ![img](/img/in-post/plugin-3.png)
 
-- [ ]mac sample
-- [ ]ios sample
+- [ ] mac sample
+- [ ] ios sample
 
 <p id = "mark"></p>
 ---
 
 UnityAppController.h 里面有这样一个宏：
-```` objective-c
+```` Objective-C
 #define IMPL_APP_CONTROLLER_SUBCLASS(ClassName) 
 @interface ClassName(OverrideAppDelegate)       
 {                                               
