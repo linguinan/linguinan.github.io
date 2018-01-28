@@ -2,7 +2,7 @@
 layout:     post
 title:      "打包mac和ios用的Unity plugins"
 subtitle:   "原生插件打包"
-date:       2018-01-01
+date:       2018-01-02
 author:     "Lgn"
 tags:
     - Unity
