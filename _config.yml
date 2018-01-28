@@ -48,11 +48,18 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: linguinan
+disqus_username: false
 
 # Netease setttings
 netease_comment: false
 
+# Gitment setttings
+gitment: true
+gitment_id: location.href
+gitment_owner: linguinan
+gitment_repo: linguinan.gitment
+gitment_client_id: 42ee32e35810837e8b8c
+gitment_client_secret: 13783442e076afd54c8c32a832d60bc9ab46f945
 
 
 # Analytics settings
