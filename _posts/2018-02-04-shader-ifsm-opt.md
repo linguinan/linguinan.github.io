@@ -27,7 +27,7 @@ As a result, the shader takes as much time as both of the branches combined.
 
 # 常规条件语句IF的写法
 
-```` GL shaders
+```` c
 if(i.screenPos.x < _Clip.x){
     texcol.a = 0;
 };
@@ -43,17 +43,19 @@ if(i.screenPos.y > (_Clip.w)){
 ````
 
 优化的关键是一个**HLSL内置函数**
-```` GL shaders
+```` c
 step(x, y)             //返回（y >= x）? 1 : 0。
 ````
 
 如上可替换为：
-```` GL shaders
+```` c
 texcol.a *= (step(_Clip.x, i.screenPos.x) * step(i.screenPos.x, _Clip.z)) * (step(_Clip.y, i.screenPos.y) * step(i.screenPos.y, _Clip.w));
 ````
 
+---
+
 实际开发中的使用：
-```` GL shaders
+```` c
 float4 restult = float4(0.0, 0.0, 0.0, 0.0);
 float sign1 = step(row, 255);   //条件：row小于255，则只为1
 float4 restult1 = sign1 * toY(_MainTex, row, col, 0.0);
