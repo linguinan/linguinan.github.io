@@ -32,7 +32,7 @@ iOS接入fb后，在跳出的页面登录时，
 * 创建模拟器版本，直接看[官方介绍](https://developers.facebook.com/docs/ios/getting-started/advanced?locale=zh_CN)
 
 * Unity打包模拟器，需要在发布前修改如下设置，以期导出模拟器版本文件
-![img](/img/in-post/simulator_setting.png)
+![img](/img/in-post/simulator_setting2.png)
 
 * 静态库的坑
 
