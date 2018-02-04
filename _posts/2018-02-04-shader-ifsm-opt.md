@@ -17,7 +17,7 @@ tags:
 
 shader中一般不推荐使用if语句，因为使用if会使得GPU计算变慢，且在某些机型上还有兼容的问题。
 
-在改帖子中，有个回复解释如下：
+在该篇帖子中，有个回复解释如下：
 ````
 when one part of the threads in a warp needs to run the first branch, and another part needs to run the second branch, both branches will be calculated for both parts. 
 As a result, the shader takes as much time as both of the branches combined.
@@ -26,7 +26,7 @@ As a result, the shader takes as much time as both of the branches combined.
 
 
 # 常规条件语句IF的写法
-如：
+
 ```` GL shaders
 if(i.screenPos.x < _Clip.x){
     texcol.a = 0;
