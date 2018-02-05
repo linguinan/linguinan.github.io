@@ -105,5 +105,8 @@ friends: [
     },{
         title: "酷壳",
         href: "https://coolshell.cn/"
+    },{
+        title: "Learn X in Y minutes",
+        href: "https://learnxinyminutes.com/"
     }
 ]
