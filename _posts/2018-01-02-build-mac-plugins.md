@@ -67,20 +67,19 @@ IMPL_APP_CONTROLLER_SUBCLASS(MainDelegate)
 
 UnityAppController.h 里面有这样一个宏：
 ```` Objective-C
-#define IMPL_APP_CONTROLLER_SUBCLASS(ClassName) 
-@interface ClassName(OverrideAppDelegate)       
-{                                               
-}                                               
-+(void)load;                                    
-@end  
-
-@implementation ClassName(OverrideAppDelegate)  
-+(void)load                                     
-{                                               
-    extern const char* AppControllerClassName;  
-    AppControllerClassName = #ClassName;        
-}                                               
-@end
+#define IMPL_APP_CONTROLLER_SUBCLASS(ClassName) \
+@interface ClassName(OverrideAppDelegate)       \
+{                                               \
+}                                               \
++(void)load;                                    \
+@end                                            \
+@implementation ClassName(OverrideAppDelegate)  \
++(void)load                                     \
+{                                               \
+    extern const char* AppControllerClassName;  \
+    AppControllerClassName = #ClassName;        \
+}                                               \
+@end                                            \
 ````
 
 将这个宏加到 CustomAppController.mm 中，即可实现自动设置 AppControllerClassName ：
