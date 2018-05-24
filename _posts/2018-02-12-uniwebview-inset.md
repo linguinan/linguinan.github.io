@@ -47,7 +47,7 @@ float _Scale()
 
 如上，把像素单位计算的值，再除以scale，才是UniWebViewEdgeInsets上该填的值
 ````c#
-#if !UNITY_EDITOR && UNITY_IPHONE
+#if !UNITY_EDITOR && UNITY_IPHONE  
         float scale = _Scale();
         top = (int)(top / scale);
 #endif
