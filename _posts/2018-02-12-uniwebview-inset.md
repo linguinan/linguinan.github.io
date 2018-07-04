@@ -33,12 +33,34 @@ new UniWebViewEdgeInsets(top, left, bottom, right);
 [iOS获取屏幕尺寸和分辨率](https://www.jianshu.com/p/1cba3a285811)
 
 ````objc
-CGRect screenRect = [[UIScreen mainScreen] bounds];
-CGSize screenSize = screenRect.size;
-NSLog(@"screen size %f - %f", screenSize.width, screenSize.height);
+float _Scale()
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenRect.size;
+    NSLog(@"screen size %f - %f", screenSize.width, screenSize.height);
 
-CGFloat scale = [UIScreen mainScreen].scale;
-NSLog(@"screen scale %f", scale);
+    CGFloat scale = [UIScreen mainScreen].scale;
+    NSLog(@"screen scale %f", scale);
+    return scale;
+}
 ````
 
 如上，把像素单位计算的值，再除以scale，才是UniWebViewEdgeInsets上该填的值
+````c#
+#if !UNITY_EDITOR && UNITY_IPHONE  
+        float scale = _Scale();
+        top = (int)(top / scale);
+#endif
+````
+
+>注：最近在新项目中实现时发现新问题
+
+如果单纯取UI组件的像素值来计算的话，除了在设计分辨率下正常外，其他分辨率下都有或多或少的偏移。
+经过实验，发现是因为在UI组件做了机型适配，在高度小于设计高度时，UI的实际高度被缩放了，处理如下：
+````c#
+int designHeight = 1080;
+if(Screen.height < designHeight)
+{//bar的高度不变，如果屏高小则需缩小后计算
+    top = (int)(top * (Screen.height * 1.0f / designHeight));
+}
+````
