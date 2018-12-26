@@ -1,45 +1,139 @@
 ---
 title: Portfolio
 layout: default
+description: "What I did"
+header-img: "img/portfolio-bg.jpg"
 ---
 
-<!DOCTYPE html>
-<html class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Lgn - Timeline</title>
-		<link rel="stylesheet" type="text/css" href="css/timeline.css" />
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-		<div class="container" style="margin:0;padding:0;width:100%;">
-			<header>
-				<img width="175" height="175" style="border-radius:50%;" src="/img/avatar-lgn.jpg">
-				<h1>Lgn</h1>
-			</header>
-			<div class="main">
-				<ul class="cbp_tmtimeline">
-					<!-- <li>
-						<div class="cbp_tmlabel">
-							<h2 id="boxoffice">Yanshuo.io (演说.io)</h2>
-							<time>2016.06</time>
-							<img src="images/work-yanshuo.jpg">
-							<ul>
-								<li>
-									"Yanshuo.io" is an online full-featured presentation software to create Web-based slides which are linkable, sharable, cross-platform and without delivery friction. It differentiate from traditional presentation tools such as Powerpoint and Keynote due to its web-friendly and its strong belief in Web.
-								</li>
-								<li class="skill">
-									<span><b>JS</b></span>
-									<span class="i-react"></span>
-									<span class="link"><a target="_blank" href="https://yanshuo.io">Try it</a></span>
-								</li>
-							</ul>
-						</div>
-					</li> -->
-				</ul>
-			</div>
-		</div>
-	</body>
-</html>
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="tag-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<head>
+
+<style type="text/css">
+p {
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: justify;
+    line-height: 25px;
+}
+</style>
+
+</head>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    function onLanChange(index){
+        if(index == 0){
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }else{
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        }
+    }
+    onLanChange(0);
+</script>
+
+<!-- Language Selector -->
+<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+    <select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+        <option value="0" selected> 中文 </option>
+        <option value="1"> English </option>
+    </select>
+    <div class="row">
+        </br>
+    </div>
+</div>
+
+<!-- Chinese Version -->
+<div class="zh">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+
+                <div class = "panel panel-default">   
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>业余开发项目</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-12 center">
+									<a href="https://itunes.apple.com/cn/app/%E6%89%93%E7%9B%92%E5%AD%90/id1390260839?mt=8">
+										<img src="/img/in-portfolio/tap-box.jpg" class="img-thumbnail">
+									</a>
+                                </div>
+                                <div class="col-md-8 col-xs-12 post-container">
+                                    <p><b>手游《打盒子》</b></p>
+                                    <p><i>开发工具：Unity3D, C#</i></p>
+                                    <p>和一个美术大大在业余时间开发的，玩法参考自一个PC单机游戏中的过关玩法。</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- English Version -->
+<div class="en">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div class = "panel panel-default">   
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>Amateur development projects</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-12 center">
+									<a href="https://itunes.apple.com/cn/app/%E6%89%93%E7%9B%92%E5%AD%90/id1390260839?mt=8">
+										<img src="/img/in-portfolio/tap-box.jpg" class="img-thumbnail">
+									</a>
+                                </div>
+                                <div class="col-md-8 col-xs-12 post-container">
+                                    <p><b>Tapbox Game</b></p>
+                                    <p><i>Development Tools: Unity3D, C#</i></p>
+                                    <p>Build with an Artist in leisure time, The play idea is find from a PC stand-alone game.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
