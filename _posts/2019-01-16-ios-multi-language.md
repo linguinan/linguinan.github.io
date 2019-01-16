@@ -10,7 +10,7 @@ tags:
 
 >项目到后期基本完成时，iOS中的多语言的处理的麻烦性就来了，有如下几点及其解决办法
 
-#问题一：  
+## 问题一：  
 在xcode中通过Localize生成了多语言后，在storyboard中有新增或改变内容时，没有同步到生成的strings文件中  
 解决：（用BartyCrouch命令追加新的内容到strings文件中）
 ```shell
@@ -20,7 +20,7 @@ $ brew install bartycrouch
 $ bartycrouch interfaces -p "/absolute/path/to/project"
 ```
 
-#问题二：  
+## 问题二：  
 每个storyboard都会生成strings，需配置的语言太多时，一个个配就很麻烦了  
 解决：（通过借鉴一个[开源项目](https://github.com/linguinan/Localizable.strings2Excel)，自己实现了转换脚本）  
 
@@ -37,7 +37,7 @@ python XlsMatch2Strings.py -f /absolute/path/to/project/Localizable -t /absolute
 ```
 * 每个项目各写个脚本一键执行就好了
 
-#问题三：  
+## 问题三：  
 这个跟多语言无关了，就是本想在Localizable目录下添加两个shell脚本时遇到的问题：  
 在shell中使用cd命令无效，解决是用". xxx.sh"来执行
 
