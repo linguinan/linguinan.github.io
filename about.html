@@ -63,9 +63,6 @@ header-img: "img/about-bg.jpg"
     _render();
 </script>
 
-<div>{{site.url}}</div>
-<div>{{page.url}}</div>
-
 {% if site.disqus_username %}
 <!-- disqus 评论框 start -->
 <div class="comment">
@@ -99,7 +96,7 @@ header-img: "img/about-bg.jpg"
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-    id: "{{page.url}}", // 可选。默认为 location.href
+    id: "{{site.url}}{{page.url}}", // 唯一id
     owner: "{{site.gitment_owner}}",
     repo: "{{site.gitment_repo}}",
     oauth: {
