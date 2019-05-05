@@ -8,7 +8,7 @@ tags:
     - ios
 ---
 
-![img](/img/in-portfolio/attendance.jpg)
+[![img](/img/in-portfolio/attendance.jpg)](https://itunes.apple.com/cn/app//id1449659944?mt=8)
 
 >这是一款效率工具，灵感来自小妹工作中遇到的烦恼，结合自己最近所学而成。经过持续优化，已能大大提升考勤方面的工作效率，减少及消灭了出错漏查等情况。
 
