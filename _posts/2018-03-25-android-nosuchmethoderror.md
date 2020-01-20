@@ -17,7 +17,7 @@ tags:
 最近换了mac机，迫不及待的配置好了各种开发环境，把原先未开发完的项目导入Unity中发布apk后，调用自己用AS写的接口时，报了如下错误：
 ![img](/img/in-post/NoSuchMethodError.png)
 
-因为是第一次中mac机上用Android Studio导出jar包，所以下意识的以为肯定是哪里配置错了，反复的检查对比，发布调试，错误依旧！
+因为是第一次在mac机上用Android Studio导出jar包，所以下意识的以为肯定是哪里配置错了，反复的检查对比，发布调试，错误依旧！
 
 **参考官方手册**：  
 [Extending the UnityPlayerActivity Java Code](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html)
@@ -36,7 +36,7 @@ using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlaye
 
 如上设置和调用都没看出问题，Google到的回答无外乎配置或方法调用，都没对上
 
-最好还是笃定自己代码没错，那就重新建个项目，写个简单接口，什么库都不用。  
+最后还是笃定自己代码没错，那就重新建个项目，写个简单接口，什么库都不用。  
 发布-》成功调用！！！
 
 那排除配置和第三方库后，唯一可能就是Unity项目中都设置问题了。
